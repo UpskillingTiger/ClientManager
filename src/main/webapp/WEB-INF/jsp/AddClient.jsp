@@ -6,48 +6,58 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Welcome</title>
+<title>AddClient</title>
 
 
 </head>
 <body>
 	<%@ include file="Header.jsp"%>
+	<br />
 	<div align="center">
 		<form:form action="${pageContext.request.contextPath}/addClient"
 			method="post" modelAttribute="client">
 			<table>
 				<tr>
-					<td><form:checkbox path="caseSelection" /><strong>Case</strong></td>
+					<td><strong>Name :</strong></td>
+					<td><form:input path="name" class="text" /></td>
+				</tr>
+				<tr>
+					<td><form:checkbox path="caseSelection" id="case"
+							class="check" /><strong>Case</strong></td>
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Cosentyx" /><strong>Cosentyx</strong></td>
+							value="Cosentyx" class="product check" disabled="true" /><strong>Cosentyx</strong></td>
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Adakveo" /><strong>Adakveo</strong></td>
+							value="Adakveo" class="product check" disabled="true" /><strong>Adakveo</strong></td>
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Promacta" /><strong>Promacta</strong></td>
+							value="Promacta" class="product check" disabled="true" /><strong>Promacta</strong></td>
 
 				</tr>
 				<tr>
-					<td><form:checkbox path="patientSelection" /><strong>Patient</strong></td>
+					<td><form:checkbox path="patientSelection" class="check" /><strong>Patient</strong></td>
 				</tr>
 				<tr>
-					<td>&nbsp; &nbsp; &nbsp; &nbsp;<strong>End Point :</strong></td>
-					<td><form:input path="url" /></td>
+					<td><strong>End Point :</strong></td>
+					<td><form:input path="url" size="50" class="text" /></td>
 				</tr>
 
-				<tr>
-					<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input
-						type="submit" value="submit" /></td>
-
-				</tr>
 
 			</table>
-
+			<br />
+			<div align="center">
+				<table>
+					<tr>
+						<td><button type="submit" class="button">
+								<span id="submit">Submit</span>
+							</button></td>
+					</tr>
+				</table>
+			</div>
 		</form:form>
 	</div>
 </body>

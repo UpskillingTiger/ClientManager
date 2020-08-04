@@ -5,22 +5,25 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Welcome</title>
+
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
 </head>
 <body>
-	<table id="menuTable">
-		<tr>
-			<td id="menuTd"><a
-				href="${pageContext.request.contextPath}/launchAddClient">Add
-					Client</a></td>
-			<td id="menuTd"><a
-				href="${pageContext.request.contextPath}/launchManageClient">Manage
-					Client</a></td>
-		</tr>
-	</table>
+	<div align="center">
+		<table>
+			<tr>
+				<td><a
+					href="${pageContext.request.contextPath}/launchAddClient"
+					class="linkbutton">Add Client</a></td>
+				<td><a
+					href="${pageContext.request.contextPath}/launchManageClient"
+					class="linkbutton">Manage Client</a></td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
 

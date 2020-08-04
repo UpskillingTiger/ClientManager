@@ -3,10 +3,19 @@ package com.upskilling.bean;
 import java.util.List;
 
 public class Client {
+	private String name;
 	private Boolean caseSelection;
 	private Boolean patientSelection;
 	private List<String> products;
 	private String url;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Boolean getCaseSelection() {
 		return caseSelection;
@@ -42,8 +51,8 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return "Client [caseSelection=" + caseSelection + ", patientSelection=" + patientSelection + ", products="
-				+ products + ", url=" + url + "]";
+		return "Client [name=" + name + ", caseSelection=" + caseSelection + ", patientSelection=" + patientSelection
+				+ ", products=" + products + ", url=" + url + "]";
 	}
 
 }
