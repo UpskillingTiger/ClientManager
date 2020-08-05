@@ -1,5 +1,8 @@
 package com.upskilling.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ClientConfiguration {
 
 	private String id;
