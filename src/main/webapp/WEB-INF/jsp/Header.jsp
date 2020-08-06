@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
-<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+<script src="https://code.jquery.com/jquery-1.4.2.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
 </head>
