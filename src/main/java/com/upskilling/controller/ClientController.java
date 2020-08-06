@@ -1,6 +1,5 @@
 package com.upskilling.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.HttpEntity;
@@ -38,18 +37,9 @@ public class ClientController {
 
 	@GetMapping({ "launchManageClient" })
 	public String launchManageClient(ModelMap model) {
-		List<ClientConfiguration> clientConfigurations = new ArrayList<ClientConfiguration>();
-		for (int i = 0; i < 3; i++) {
-			ClientConfiguration value = new ClientConfiguration();
-			getAllClients();
-			value.setId(i + "");
-			value.setName("SEG");
-			value.setStatus(true);
-			clientConfigurations.add(value);
-		}
-		clientConfigurations.get(0).setStatus(false);
+		List<ClientConfiguration> allClients = getAllClients().getClientModels();
 		ClientConfigurationWrapper clientConfigurationWrapper = new ClientConfigurationWrapper();
-		clientConfigurationWrapper.setClientConfigurations(clientConfigurations);
+		clientConfigurationWrapper.setClientModels(allClients);
 		model.put("clientConfigurationWrapper", clientConfigurationWrapper);
 		return "ManageClient";
 	}
@@ -64,7 +54,7 @@ public class ClientController {
 
 	private ClientConfigurationWrapper getAllClients() {
 
-		final String uri = "${service.host}/api/client";
+		final String uri = "http://api:8080/api/client";
 
 		RestTemplate restTemplate = new RestTemplate();
 
@@ -74,7 +64,7 @@ public class ClientController {
 
 		ResponseEntity<ClientConfigurationWrapper> respEntity = restTemplate.exchange(uri, HttpMethod.GET, entity,
 				ClientConfigurationWrapper.class);
-
+		System.out.println("respEntity Response is ..." + respEntity);
 		ClientConfigurationWrapper body = respEntity.getBody();
 		System.out.println("ClientConfigurationWrapper Response is ..." + body);
 		return body;

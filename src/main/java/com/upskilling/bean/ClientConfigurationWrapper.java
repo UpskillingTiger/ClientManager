@@ -7,19 +7,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ClientConfigurationWrapper {
 
-	private List<ClientConfiguration> clientConfigurations;
+	private List<ClientConfiguration> clientModels;
 
-	public List<ClientConfiguration> getClientConfigurations() {
-		return clientConfigurations;
+	public List<ClientConfiguration> getClientModels() {
+		return clientModels;
 	}
 
-	public void setClientConfigurations(List<ClientConfiguration> clientConfigurations) {
-		this.clientConfigurations = clientConfigurations;
+	public void setClientModels(List<ClientConfiguration> clientModels) {
+		this.clientModels = clientModels;
 	}
 
 	@Override
 	public String toString() {
-		return "ClientConfigurationWrapper [clientConfigurations=" + clientConfigurations + "]";
+		return "ClientConfigurationWrapper [clientModels=" + clientModels + "]";
 	}
 
 }

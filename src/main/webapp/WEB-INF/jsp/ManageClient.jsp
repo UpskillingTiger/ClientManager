@@ -18,19 +18,17 @@
 		<form:form action="${pageContext.request.contextPath}/manageClient"
 			method="post" modelAttribute="clientConfigurationWrapper">
 			<table>
-				<c:forEach var="clientConfiguration"
-					items="${clientConfigurationWrapper.clientConfigurations}"
+				<c:forEach var="clientModel"
+					items="${clientConfigurationWrapper.clientModels}"
 					varStatus="theCount">
 
 					<tr>
 
-						<td><form:hidden
-								path="clientConfigurations[${theCount.index}].name" /> <form:hidden
-								path="clientConfigurations[${theCount.index}].id" /> <strong>
-								${clientConfiguration.name}</strong></td>
+						<td><form:hidden path="clientModels[${theCount.index}].name" />
+							<form:hidden path="clientModels[${theCount.index}].id" /> <strong>
+								${clientModel.name}</strong></td>
 						<td><form:checkbox
-								path="clientConfigurations[${theCount.index}].status"
-								class="check" /></td>
+								path="clientModels[${theCount.index}].status" class="check" /></td>
 					</tr>
 
 				</c:forEach>
