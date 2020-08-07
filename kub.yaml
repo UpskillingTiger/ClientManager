@@ -3,15 +3,11 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2020-08-07T04:18:18Z"
   generation: 6
   labels:
     app: portal
   name: portal
   namespace: default
-  resourceVersion: "156838"
-  selfLink: /apis/apps/v1/namespaces/default/deployments/portal
-  uid: 783830f2-2226-455f-a4f1-5545f0280bc0
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
