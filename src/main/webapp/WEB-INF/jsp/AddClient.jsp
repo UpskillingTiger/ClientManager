@@ -19,7 +19,7 @@
 			<table>
 				<tr>
 					<td><strong>Name :</strong></td>
-					<td><form:input path="name" class="text" /></td>
+					<td><form:input path="name" class="text" required="required"/></td>
 				</tr>
 				<tr>
 					<td><form:checkbox path="caseSelection" id="case"
@@ -42,8 +42,8 @@
 					<td><form:checkbox path="patientSelection" class="check" /><strong>Patient</strong></td>
 				</tr>
 				<tr>
-					<td><strong>End Point *:</strong></td>
-					<td><form:input path="url" size="50" class="text" /></td>
+					<td><strong>End Point :</strong></td>
+					<td><form:input path="url" size="50" class="text" required="required"/></td>
 				</tr>
 
 
