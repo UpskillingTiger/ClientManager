@@ -18,7 +18,7 @@
 			method="post" modelAttribute="client">
 			<table>
 				<tr>
-					<td><strong>Name :</strong></td>
+					<td><strong>Name *:</strong></td>
 					<td><form:input path="name" class="text" /></td>
 				</tr>
 				<tr>
