@@ -12,8 +12,8 @@ steps:
   args:
   - build
   - -t
-  - gcr.io/$GOOGLE_CLOUD_PROJECT/clientmanager
+  - gcr.io/$PROJECT_ID/clientmanager
   - --build-arg=WAR_FILE=target/*.war
   - .
 images:
-- gcr.io/$GOOGLE_CLOUD_PROJECT/clientmanager
+- gcr.io/$PROJECT_ID/clientmanager
