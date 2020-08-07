@@ -19,7 +19,7 @@
 			<table>
 				<tr>
 					<td><strong>Name :</strong></td>
-					<td><form:input path="name" class="text" required="required"/></td>
+					<td><form:input path="name" class="text" required="required" /></td>
 				</tr>
 				<tr>
 					<td><form:checkbox path="caseSelection" id="case"
@@ -27,15 +27,25 @@
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Cosentyx" class="product check" disabled="true" /><strong>Cosentyx</strong></td>
+							value="a038A000004vOANQA2" class="product check" disabled="true" /><strong>ACTHAR</strong></td>
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Adakveo" class="product check" disabled="true" /><strong>Adakveo</strong></td>
+							value="a038A000004vOAMQA2" class="product check" disabled="true" /><strong>ILUMYA</strong></td>
 				</tr>
 				<tr>
 					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
-							value="Promacta" class="product check" disabled="true" /><strong>Promacta</strong></td>
+							value="a038A000004vOAOQA2" class="product check" disabled="true" /><strong>YONSA</strong></td>
+
+				</tr>
+				<tr>
+					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
+							value="a038A000004vOAUQA2" class="product check" disabled="true" /><strong>ABSORICA</strong></td>
+
+				</tr>
+				<tr>
+					<td>&nbsp; &nbsp; &nbsp;<form:checkbox path="products"
+							value="a038A000004vOATQA2" class="product check" disabled="true" /><strong>ODOMZO</strong></td>
 
 				</tr>
 				<tr>
@@ -43,7 +53,8 @@
 				</tr>
 				<tr>
 					<td><strong>End Point :</strong></td>
-					<td><form:input path="url" size="50" class="text" required="required"/></td>
+					<td><form:input path="url" size="50" class="text"
+							required="required" /></td>
 				</tr>
 
 
