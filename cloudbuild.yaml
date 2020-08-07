@@ -12,15 +12,15 @@ steps:
   args:
   - build
   - -t
-  - gcr.io/$PROJECT_ID/clientmanager
+  - gcr.io/$PROJECT_ID/clientmanager:$COMMIT_SHA
   - --build-arg=WAR_FILE=target/*.war
   - .
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
   - --filename=kub.yaml
-  - --image=gcr.io/$PROJECT_ID/clientmanager
+  - --image=gcr.io/$PROJECT_ID/clientmanager:$COMMIT_SHA
   - --location=us-central1-c
   - --cluster=tiger-cluster-1 
 images:
-- gcr.io/$PROJECT_ID/clientmanager
+- gcr.io/$PROJECT_ID/clientmanager:$COMMIT_SHA
