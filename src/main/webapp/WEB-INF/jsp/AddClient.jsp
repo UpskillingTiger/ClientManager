@@ -18,7 +18,7 @@
 			method="post" modelAttribute="client">
 			<table>
 				<tr>
-					<td><strong>Name *:</strong></td>
+					<td><strong>Name :</strong></td>
 					<td><form:input path="name" class="text" /></td>
 				</tr>
 				<tr>
@@ -42,7 +42,7 @@
 					<td><form:checkbox path="patientSelection" class="check" /><strong>Patient</strong></td>
 				</tr>
 				<tr>
-					<td><strong>End Point :</strong></td>
+					<td><strong>End Point *:</strong></td>
 					<td><form:input path="url" size="50" class="text" /></td>
 				</tr>
 
